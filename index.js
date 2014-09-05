@@ -6,9 +6,8 @@ app.get('/', function(req, res){
   res.send('<p>Hi</p>');
 });
 
-app.get('/ping', function(req, res){
-  console.log("Pinged the thing");
-  io.emit('ping');
+app.get('/update_todos', function(req, res){
+  io.emit('updateTodos');
   res.end();
 })
 
