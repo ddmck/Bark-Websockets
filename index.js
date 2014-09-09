@@ -7,7 +7,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/update_todos', function(req, res){
-  io.emit('updateTodos');
+  io.emit('updateTodos/' + req.query.userid);
   res.end();
 })
 
